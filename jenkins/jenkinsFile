@@ -6,8 +6,7 @@ pipeline{
     stages{
         stage("SCM Checkout"){
             steps{
-            git 'https://github.com/tde13/DevOps_ScholarMgntSys.git
-'
+            git 'https://github.com/tde13/DevOps_ScholarMgntSys.git'
             }
         }
         stage("Maven Build"){
