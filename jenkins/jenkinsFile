@@ -11,7 +11,7 @@ pipeline {
                 // Manually checkout source code using Git
 
                 git '
-https://github.com/Group-5-BITS/Group5-EComm'
+https://github.com/tde13/DevOps_ScholarMgntSys'
 
             }
 
