@@ -1,4 +1,4 @@
-# Spring MVC Tutorial | Spring Boot | Full Course [2021]
-Spring MVC Tutorial | Spring Boot | Full Course [2021] at https://youtu.be/Ku3gsv7_bCc
+# Devops Assignment for group #2
 
-Blog tutorial at https://www.javaguides.net/2021/05/spring-boot-crud-tutorial.html
+Tools and tech used:
+Spring Boot | Spring Security | Jenkins | Selenium
