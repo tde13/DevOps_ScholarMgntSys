@@ -1,18 +1,21 @@
-pipeline{
+pipeline {
     agent any
-    tools{
+    tools {
         maven 'Maven'
     }
-    stages{
-        stage("SCM Checkout"){
-            steps{
-            git 'https://github.com/tde13/DevOps_ScholarMgntSys.git'
+    stages {
+        stage("SCM Checkout") {
+            steps {
+                script {
+                    git branch: 'main', url: 'https://github.com/tde13/DevOps_ScholarMgntSys.git'
+                }
             }
         }
-        stage("Maven Build"){
-            steps{
+        stage("Maven Build") {
+            steps {
                 bat 'mvn clean package'
             }
         }
     }
 }
+
