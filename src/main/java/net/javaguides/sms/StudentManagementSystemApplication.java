@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import net.javaguides.sms.entity.Student;
 import net.javaguides.sms.repository.StudentRepository;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @SpringBootApplication
 public class StudentManagementSystemApplication implements CommandLineRunner{
@@ -17,19 +18,20 @@ public class StudentManagementSystemApplication implements CommandLineRunner{
 
 	@Autowired
 	private StudentRepository studentRepository;
+
+	@Autowired
+	private BCryptPasswordEncoder passwordEncoder;
 	
 	@Override
 	public void run(String... args) throws Exception {
-		/*
-		 * Student student1 = new Student("Ramesh", "Fadatare", "ramesh@gmail.com");
-		 * studentRepository.save(student1);
-		 * 
-		 * Student student2 = new Student("Sanjay", "Jadhav", "sanjay@gmail.com");
-		 * studentRepository.save(student2);
-		 * 
-		 * Student student3 = new Student("tony", "stark", "tony@gmail.com");
-		 * studentRepository.save(student3);
-		 */
+
+
+		//To be run only first time you run the application; comment after that
+//		  Student student1 = new Student(100L,"Roger","De","R@sap.com",
+//					"SAP","ROLE_ADMIN",passwordEncoder.encode("1234"),"8777777777",
+//					"Kolkata","2022","STS","BCA","Scholar");
+//		  studentRepository.save(student1);
+
 	}
 
 }
