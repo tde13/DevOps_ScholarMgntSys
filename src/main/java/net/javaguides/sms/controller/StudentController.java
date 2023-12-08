@@ -100,6 +100,13 @@ public class StudentController {
 		existingStudent.setFirstName(student.getFirstName());
 		existingStudent.setLastName(student.getLastName());
 		existingStudent.setEmail(student.getEmail());
+		existingStudent.setCurrentOrg(student.getCurrentOrg());
+		existingStudent.setPhone(student.getPhone());
+		existingStudent.setAddress(student.getAddress());
+		existingStudent.setBatch(student.getBatch());
+		existingStudent.setSchoolName(student.getSchoolName());
+		existingStudent.setDegree(student.getDegree());
+		existingStudent.setOrgRole(student.getOrgRole());
 		
 		// save updated student object
 		studentService.updateStudent(existingStudent);
