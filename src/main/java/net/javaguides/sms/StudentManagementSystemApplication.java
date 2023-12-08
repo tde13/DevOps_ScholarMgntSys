@@ -25,12 +25,13 @@ public class StudentManagementSystemApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 
-
-		//To be run only first time you run the application; comment after that
-//		  Student student1 = new Student(100L,"Roger","De","R@sap.com",
-//					"SAP","ROLE_ADMIN",passwordEncoder.encode("1234"),"8777777777",
-//					"Kolkata","2022","STS","BCA","Scholar");
-//		  studentRepository.save(student1);
+/*
+//		To be run only first time you run the application; comment after that
+		  Student student1 = new Student(100L,"Roger","De","R@sap.com",
+					"SAP","ROLE_ADMIN",passwordEncoder.encode("1234"),"8777777777",
+					"Kolkata","2022","STS","BCA","Scholar");
+		  studentRepository.save(student1);
+		  */
 
 	}
 
