@@ -14,6 +14,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 @EnableWebSecurity
 public class MyConfig extends WebSecurityConfigurerAdapter {
 
+    public static final String ADMIN = "ADMIN";
+
     @Bean
     public UserDetailsService getUserDetailsService(){
         return  new CustomUserDetailServiceImpl();
@@ -39,9 +41,9 @@ public class MyConfig extends WebSecurityConfigurerAdapter {
     }
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-        .antMatchers("/students/new/**").hasRole("ADMIN") //adding
-        .antMatchers("/user/students/edit/**").hasAnyRole("ADMIN","USER") // editing
-        .antMatchers("/students/**").hasRole("ADMIN")        //deleting
+        .antMatchers("/students/new/**").hasRole(ADMIN) //adding
+        .antMatchers("/user/students/edit/**").hasAnyRole(ADMIN,"USER") // editing
+        .antMatchers("/students/**").hasRole(ADMIN)        //deleting
         .antMatchers("/**").permitAll()
                 .and().formLogin().and().csrf().disable()
                 .logout()
